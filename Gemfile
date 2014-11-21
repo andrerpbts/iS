@@ -8,7 +8,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 gem 'jquery-rails'
-gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'therubyracer', platforms: :ruby
 
@@ -23,9 +22,8 @@ gem 'rails-assets-restangular', '~> 1.3.1'
 gem 'rails-assets-lodash', '~> 2.4.1'
 
 gem 'simple_form', '~> 3.0.2'
-gem 'haml', '~> 4.0.4'
 
-gem 'enumerate_it', '~> 1.2.0'
+gem 'enumerize'
 gem 'pg', '~> 0.17.1'
 
 group :doc do
