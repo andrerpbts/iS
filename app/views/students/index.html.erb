@@ -1,0 +1,32 @@
+<h1><%= tmp Student %></h1>
+
+<%= link_to t('helpers.submit.create', model: tm(Student)), new_student_path %>
+<br /><br />
+<% if @students.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th><%= ta Student, :register_number %></th>
+        <th><%= ta Student, :name %></th>
+        <th><%= ta Student, :status %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= student.register_number %></td>
+          <td><%= student.name %></td>
+          <td><%= student.status_text %></td>
+          <td>
+            <%= link_to t('show'), student %>
+            <%= link_to t('edit'), edit_student_path(student) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <%= t('not_found', model: tm(Student).downcase) %>
+<% end %>
+

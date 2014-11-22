@@ -1,0 +1,4 @@
+pt-BR:
+  not_found: "Nenhum %{model} encontrado"
+  edit: "Editar"
+  show: "Visualizar"

@@ -1,0 +1,6 @@
+pt-BR:
+  enumerize:
+    student:
+      status:
+        enabled: Ativo
+        disabled: Desabilitado

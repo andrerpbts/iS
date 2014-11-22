@@ -1,0 +1,7 @@
+<h1><%= @student.name %></h1>
+<%= link_to t('edit'), edit_student_path(@student) %>
+<br /><br />
+<strong><%= ta Student, :register_number %>:</strong> <%= @student.register_number %><br />
+<strong><%= ta Student, :status %>:</strong> <%= @student.status_text %><br />
+
+
