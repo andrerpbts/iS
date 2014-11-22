@@ -1,7 +1,9 @@
-<h1><%= @student.name %></h1>
-<%= link_to t('edit'), edit_student_path(@student) %>
+<h1 class="page-header"><%= @student.name %></h1>
+<%= link_to t('edit'),
+            edit_student_path(@student),
+            class: 'btn btn-primary' %>
 <br /><br />
 <strong><%= ta Student, :register_number %>:</strong> <%= @student.register_number %><br />
 <strong><%= ta Student, :status %>:</strong> <%= @student.status_text %><br />
-<h2><%= tmp Classroom %></h2>
+<h2 class="sub-header"><%= tmp Classroom %></h2>
 <%= render partial: 'classrooms/list', locals: { student: @student, classrooms: @student.classrooms } %>

@@ -1,9 +1,11 @@
-<h1><%= tmp Course %></h1>
+<h1 class="page-header"><%= tmp Course %></h1>
 
-<%= link_to t('helpers.submit.create', model: tm(Course)), new_course_path %>
+<%= link_to t('helpers.submit.create', model: tm(Course)),
+            new_course_path,
+            class: 'btn btn-success' %>
 <br /><br />
 <% if @courses.any? %>
-  <table>
+  <table class="table table-striped">
     <thead>
       <tr>
         <th><%= ta Course, :name %></th>
@@ -17,8 +19,8 @@
           <td><%= course.name %></td>
           <td><%= course.status_text %></td>
           <td>
-            <%= link_to t('show'), course %>
-            <%= link_to t('edit'), edit_course_path(course) %>
+            <%= link_to t('show'), course, class: 'btn btn-xs btn-default' %>
+            <%= link_to t('edit'), edit_course_path(course), class: 'btn btn-xs btn-primary' %>
           </td>
         </tr>
       <% end %>

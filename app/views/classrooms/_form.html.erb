@@ -1,7 +1,17 @@
-<%= simple_form_for [classroom.student, classroom] do |f| %>
-  <%= f.input :student_name, input_html: { disabled: true } %>
-  <%= f.input :entry_at %>
-  <%= f.association :course, collection: courses %>
+<%= simple_form_for [classroom.student, classroom], html: {class: 'form-vertical' } do |f| %>
+  <div class="form-group">
+    <%= f.input :student_name, input_html: { disabled: true } %>
+  </div>
 
-  <%= f.submit %>
+  <div class="form-group">
+    <%= f.input :entry_at %>
+  </div>
+
+  <div class="form-group">
+    <%= f.association :course, collection: courses %>
+  </div>
+
+  <br />
+
+  <%= f.submit class: "btn btn-primary"  %>
 <% end %>

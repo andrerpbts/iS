@@ -1,7 +1,9 @@
-<%= link_to t('helpers.submit.create', model: tm(Classroom)), new_student_classroom_path(student) %>
+<%= link_to t('helpers.submit.create', model: tm(Classroom)),
+            new_student_classroom_path(student),
+            class: 'btn btn-success' %>
 <br /><br />
 <% if classrooms.any? %>
-  <table>
+  <table class="table table-striped">
     <thead>
       <tr>
         <th><%= ta Classroom, :entry_at %></th>

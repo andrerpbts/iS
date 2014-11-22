@@ -1,5 +1,7 @@
-<h1><%= @course.name %></h1>
-<%= link_to t('edit'), edit_course_path(@course) %>
+<h1 class="page-header"><%= @course.name %></h1>
+<%= link_to t('edit'),
+            edit_course_path(@course),
+            class: 'btn btn-primary' %>
 <br /><br />
 <strong><%= ta Course, :description %>:</strong> <%= @course.description %><br />
 <strong><%= ta Course, :status %>:</strong> <%= @course.status_text %><br />
