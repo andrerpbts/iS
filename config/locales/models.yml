@@ -1,11 +1,17 @@
 pt-BR:
   activerecord:
     models:
+      course:
+        one: Curso
+        other: Cursos
       student:
         one: Estudante
         other: Estudantes
 
     attributes:
+      course:
+        name: Nome
+        status: Situação
       student:
         name: Nome
         register_number: RA

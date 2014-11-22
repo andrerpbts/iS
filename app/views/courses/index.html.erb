@@ -1,0 +1,30 @@
+<h1><%= tmp Course %></h1>
+
+<%= link_to t('helpers.submit.create', model: tm(Course)), new_course_path %>
+<br /><br />
+<% if @courses.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th><%= ta Course, :name %></th>
+        <th><%= ta Course, :status %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @courses.each do |course| %>
+        <tr>
+          <td><%= course.name %></td>
+          <td><%= course.status_text %></td>
+          <td>
+            <%= link_to t('show'), course %>
+            <%= link_to t('edit'), edit_course_path(course) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <%= t('not_found', model: tm(Course).downcase) %>
+<% end %>
+

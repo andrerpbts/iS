@@ -4,3 +4,7 @@ pt-BR:
       status:
         enabled: Ativo
         disabled: Desabilitado
+    course:
+      status:
+        active: Ativo
+        inactive: Inativo
