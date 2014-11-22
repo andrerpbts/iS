@@ -3,5 +3,5 @@
 <br /><br />
 <strong><%= ta Student, :register_number %>:</strong> <%= @student.register_number %><br />
 <strong><%= ta Student, :status %>:</strong> <%= @student.status_text %><br />
-
-
+<h2><%= tmp Classroom %></h2>
+<%= render partial: 'classrooms/list', locals: { student: @student, classrooms: @student.classrooms } %>

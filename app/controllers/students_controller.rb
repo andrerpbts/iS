@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find(params[:id])
+    @student = Student.includes(classrooms: :course).find(params[:id])
     respond_with @students
   end
 

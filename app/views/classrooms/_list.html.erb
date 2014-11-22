@@ -1,0 +1,24 @@
+<%= link_to t('helpers.submit.create', model: tm(Classroom)), new_student_classroom_path(student) %>
+<br /><br />
+<% if classrooms.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th><%= ta Classroom, :entry_at %></th>
+        <th><%= ta Classroom, :course %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% classrooms.each do |classroom| %>
+        <tr>
+          <td><%= l classroom.entry_at, format: :short %></td>
+          <td><%= classroom.course_name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <%= t('not_found', model: tm(Classroom).downcase) %>
+<% end %>
+

@@ -1,0 +1,7 @@
+<%= simple_form_for [classroom.student, classroom] do |f| %>
+  <%= f.input :student_name, input_html: { disabled: true } %>
+  <%= f.input :entry_at %>
+  <%= f.association :course, collection: courses %>
+
+  <%= f.submit %>
+<% end %>

@@ -1,6 +1,9 @@
 pt-BR:
   activerecord:
     models:
+      classroom:
+        one: Matrícula
+        other: Matrículas
       course:
         one: Curso
         other: Cursos
@@ -9,6 +12,12 @@ pt-BR:
         other: Estudantes
 
     attributes:
+      classroom:
+        student_name: Estudante
+        course_name: Curso
+        student: Estudante
+        course: Curso
+        entry_at: Data da Matrícula
       course:
         name: Nome
         status: Situação
